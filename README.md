@@ -5,8 +5,7 @@
 [![Image Size](https://img.shields.io/imagelayers/image-size/dweomer/nginx-auth-ldap/latest.svg)][layers]
 [![Image Layers](https://img.shields.io/imagelayers/layers/dweomer/nginx-auth-ldap/latest.svg)][layers]
 
-Built to be compatible with the [official Nginx image](https://hub.docker.com/_/nginx/).
-
+Built to be compatible with the [official Nginx image](https://hub.docker.com/_/nginx/). Leverages the LDAP authentication module from [kvspb/nginx-auth-ldap](https://github.com/kvspb/nginx-auth-ldap)
 
 ## License
 
