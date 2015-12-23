@@ -1,0 +1,14 @@
+version: 1
+
+# username = derp, password = D1rp
+dn: uid=derp,ou=users,dc=example,dc=com
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: Herp Derp
+sn: Derp
+uid: derp
+userPassword:: e3NzaGF9c0dCai9wR2Y3ekVqRytZRWxualdLcWdLU1ZKSk1KMzh4YWRVbXc9P
+ Q==
+

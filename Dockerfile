@@ -2,9 +2,7 @@ FROM alpine
 
 MAINTAINER Jacob Blain Christen <mailto:dweomer5@gmail.com, https://github.com/dweomer, https://twitter.com/dweomer>
 
-ARG NGINX_VERSION=1.9.9
-
-LABEL "ARG:NGINX_VERSION"="${NGINX_VERSION}"
+ENV NGINX_VERSION=1.9.9
 
 RUN set -x \
  && mkdir -p /tmp/src/nginx \
