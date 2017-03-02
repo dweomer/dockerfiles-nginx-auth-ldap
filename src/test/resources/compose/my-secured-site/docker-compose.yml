@@ -1,12 +1,19 @@
 test-success:
-  command: "sh -c 'apk add --update curl > /dev/null 2>&1; curl -fIsu derp:D1rp http://website/secured/index.html'"
+  command: "sh -c 'apk add --update curl > /dev/null 2>&1; curl -fvsu derp:D1rp http://website/secured/index.html'"
   image: alpine
   links:
   - web:website
   tty: false
 
-test-fail:
-  command: "sh -c 'apk add --update curl > /dev/null 2>&1; curl -fIsu derp:D3rp http://website/secured/index.html'"
+test-fail-badpass:
+  command: "sh -c 'apk add --update curl > /dev/null 2>&1; curl -fvsu derp:D3rp http://website/secured/index.html'"
+  image: alpine
+  links:
+  - web:website
+  tty: false
+
+test-fail-noauth:
+  command: "sh -c 'apk add --update curl > /dev/null 2>&1; curl -fvs http://website/secured/index.html'"
   image: alpine
   links:
   - web:website
@@ -28,4 +35,3 @@ dir:
   - 389:389
   volumes:
   - ./derp.ldif:/srv/openldap.d/010-derp.ldif
-

@@ -1,8 +1,8 @@
-FROM alpine
+FROM alpine:3.4
 
-MAINTAINER Jacob Blain Christen <mailto:dweomer5@gmail.com, https://github.com/dweomer, https://twitter.com/dweomer>
+MAINTAINER Jacob Blain Christen <https://keybase.io/dweomer>
 
-ENV NGINX_VERSION=1.9.9
+ENV NGINX_VERSION=1.9.15
 
 RUN set -x \
  && mkdir -p /tmp/src/nginx \
@@ -31,8 +31,7 @@ RUN set -x \
 # Install Nginx from source, see http://nginx.org/en/linux_packages.html#mainline
  && curl -fsSL https://github.com/nginx/nginx/archive/release-${NGINX_VERSION}.tar.gz | tar xz --strip=1 -C /tmp/src/nginx \
  && curl -fsSL https://github.com/kvspb/nginx-auth-ldap/archive/master.zip -o /tmp/nginx-auth-ldap-master.zip \
- && cd /tmp/src \
- && unzip /tmp/nginx-auth-ldap-master.zip \
+ && unzip -d /tmp/src /tmp/nginx-auth-ldap-master.zip \
  && cd /tmp/src/nginx \
  && ./auto/configure \
         --prefix=/usr/share/nginx \
