@@ -1,12 +1,11 @@
-# Nginx on Alpine w/ LDAP Authentication
+# dweomer/nginx-auth-ldap
+[![stars](https://img.shields.io/docker/stars/dweomer/nginx-auth-ldap.svg?maxAge=2592000)](https://hub.docker.com/r/dweomer/nginx-auth-ldap/) [![pulls](https://img.shields.io/docker/pulls/dweomer/nginx-auth-ldap.svg?maxAge=2592000)](https://hub.docker.com/r/dweomer/nginx-auth-ldap/) [![](https://images.microbadger.com/badges/image/dweomer/nginx-auth-ldap.svg)](https://microbadger.com/images/dweomer/nginx-auth-ldap "Get your own image badge on microbadger.com") [![](https://images.microbadger.com/badges/version/dweomer/nginx-auth-ldap.svg)](https://microbadger.com/images/dweomer/nginx-auth-ldap "Get your own version badge on microbadger.com")
 
-[![Docker Stars](https://img.shields.io/docker/stars/dweomer/nginx-auth-ldap.svg)][hub]
-[![Docker Pulls](https://img.shields.io/docker/pulls/dweomer/nginx-auth-ldap.svg)][hub]
-[![Docker Size](https://images.microbadger.com/badges/image/dweomer/nginx-auth-ldap.svg)](https://microbadger.com/images/dweomer/nginx-auth-ldap "Get your own image badge on microbadger.com")
+## Nginx on Alpine w/ LDAP Authentication
 
 Built to be compatible with the [official Nginx image](https://hub.docker.com/_/nginx/). Leverages the LDAP authentication module from [kvspb/nginx-auth-ldap](https://github.com/kvspb/nginx-auth-ldap)
 
-Please see [src/test/resources/compose/my-secured-site](src/test/resources/compose/my-secured-site) for an example of how to properly configure.
+Please see [test/my-secured-site/secured.conf](test/my-secured-site/secured.conf) for an example of how to properly configure.
 
 #####  Copyright Notice
 >The [MIT License](LICENSE) ([MIT](https://opensource.org/licenses/MIT))
