@@ -1,6 +1,6 @@
 FROM alpine:3.5
 
-ENV NGINX_VERSION=1.13.5
+ENV NGINX_VERSION=1.17.1
 
 RUN set -x \
  && mkdir -p \
@@ -101,7 +101,8 @@ RUN set -x \
     /etc/nginx/*.default \
     /tmp/* \
     /var/tmp/* \
-    /var/cache/apk/*
+    /var/cache/apk/* \
+ && chmod g=u -R /var/run && chgrp 0 -R /var/run
 
 COPY --from=library/nginx:alpine /etc/nginx/nginx.conf /etc/nginx/nginx.conf
 COPY --from=library/nginx:alpine /etc/nginx/conf.d/default.conf /etc/nginx/conf.d/default.conf
